@@ -1,0 +1,6 @@
+version: 0.1
+phases:
+    install:
+        commands:
+        - bundle exec jekyll
+        - aws s3 sync dist s3://my-docs-website-test-at-pycom --delete
